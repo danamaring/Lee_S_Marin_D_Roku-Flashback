@@ -2,7 +2,7 @@
 
     $db_dsn = array(
         'host' => 'localhost',
-        'dbname' => 'tempForVue',
+        'dbname' => 'db_roku-flashback',
         'charset' => 'utf8',
     );
     

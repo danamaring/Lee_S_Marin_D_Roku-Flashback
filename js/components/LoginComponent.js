@@ -1,30 +1,30 @@
 export default {
     template: `
-        <div class="container">
-            <div class="jumbotron roku-jumbotron">
-                <h1 class="display-4">Welcome to Flashback!</h1>
-                <p class="lead">Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
-                <hr class="my-4">
-
-                <form @submit.prevent="login">
-                    <div class="form-row align-items-center">
-                        <div class="col-md-3 my-1">
-                            <label class="sr-only" for="inlineFormInputName">Name</label>
-                            <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
-                        </div>
-
-                        <div class="col-md-3 my-1">
-                            <label class="sr-only" for="inlineFormPassword">Name</label>
-                            <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
-                        </div>
-
-                        <div class="col-auto my-1">
-                            <button type="submit" class="btn btn-primary">Go!</button>
-                        </div>
-                    </div>
-                </form>            
+        <section id="login-container">
+            <div id="login-header">
+                <a href="help.html">Help</a>
             </div>
-        </div>
+            <div id="stacked-logo">
+                <img src="images/roku-logo-stacked.svg" alt="Roku Flashback Logo">
+            </div>
+            <form @submit.prevent="login">
+                <div class="login-form">
+                    <div class="username-field">
+                        <label for="inlineFormInputName">Name</label>
+                        <input v-model="input.username" type="text" placeholder="username" required>
+                    </div>
+
+                    <div class="password-field">
+                        <label for="inlineFormPassword">Name</label>
+                        <input v-model="input.password" type="password" placeholder="password" required>
+                    </div>
+
+                    <div class="submit-button">
+                        <button type="submit">Go!</button>
+                    </div>
+                </div>
+            </form>  
+        </section>
      `,
 
     data() {

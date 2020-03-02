@@ -23,10 +23,6 @@ The Developer role was to create the proper project stucture, create and use dat
 * AJAX/JS
 * VUE.js
 
-### Installing
-
-* cd to the directory of your choice and hack away!
-
 ## Authors
 
 * [Dana Marin Garcia](https://github.com/danamaring)
