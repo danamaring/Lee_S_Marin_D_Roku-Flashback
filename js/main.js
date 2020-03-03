@@ -6,7 +6,7 @@ import UsersComponent from "./components/UsersComponent.js";
   let router = new VueRouter({
     // set routes
     routes: [
-      { path: '/', redirect: { name: "login" } },
+      // { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: "users", component: UsersComponent }
     ]

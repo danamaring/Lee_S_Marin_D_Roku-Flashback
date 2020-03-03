@@ -1,27 +1,30 @@
 export default {
     template: `
         <section id="login-container">
-            <div id="login-header">
+            <div id="help">
                 <a href="help.html">Help</a>
             </div>
             <div id="stacked-logo">
-                <img src="images/roku-logo-stacked.svg" alt="Roku Flashback Logo">
+                <img src="images/logo-stacked.svg" alt="Roku Flashback Logo">
             </div>
             <form @submit.prevent="login">
                 <div class="login-form">
                     <div class="username-field">
-                        <label for="inlineFormInputName">Name</label>
+                        <label for="inlineFormInputName"></label>
                         <input v-model="input.username" type="text" placeholder="username" required>
                     </div>
 
                     <div class="password-field">
-                        <label for="inlineFormPassword">Name</label>
+                        <label for="inlineFormPassword"></label>
                         <input v-model="input.password" type="password" placeholder="password" required>
                     </div>
 
                     <div class="submit-button">
-                        <button type="submit">Go!</button>
+                        <button type="submit">Sign In</button>
                     </div>
+                </div>
+                <div id="new-to-roku">
+                    <a href="sign-up.html">New to Roku? Sign up now.</a>
                 </div>
             </form>  
         </section>

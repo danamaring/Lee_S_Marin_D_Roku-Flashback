@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #515251;
+      }
+    </style>
+  </defs>
+  <title>delete_icon</title>
+  <path id="Icon_awesome-trash" data-name="Icon awesome-trash" class="cls-1" d="M31,22.49H28.18L28,22.05a.56.56,0,0,0-.5-.31H24.78a.56.56,0,0,0-.5.31l-.22.44H21.25a.38.38,0,0,0-.38.37v.75a.38.38,0,0,0,.38.38H31a.38.38,0,0,0,.37-.38v-.75A.38.38,0,0,0,31,22.49Zm-8.88,10.2a1.13,1.13,0,0,0,1.12,1.05H29a1.11,1.11,0,0,0,1.12-1.06l.5-7.94h-9Z" transform="translate(-20.87 -21.74)"/>
+</svg>
