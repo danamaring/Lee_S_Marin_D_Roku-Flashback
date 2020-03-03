@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.1 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>save_icon</title>
+  <path id="Icon_feather-check" data-name="Icon feather-check" class="cls-1" d="M32.67,23.24,27.21,28.7l-3.55,3.54-4.09-4.09" transform="translate(-18.57 -22.24)"/>
+</svg>

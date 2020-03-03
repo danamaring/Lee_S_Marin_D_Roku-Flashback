@@ -1,0 +1,23 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 336.93 105.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="3.4" y1="88.15" x2="3.4" y2="83.69" gradientTransform="matrix(20.56, 0, 0, -23.1, -19.56, 2038)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#83469b"/>
+      <stop offset="1" stop-color="#361e4d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="4.38" y1="82.49" x2="4.38" y2="78.03" gradientTransform="matrix(57.51, 0, 0, -18.93, -38.45, 1583.86)" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>rouk</title>
+  <g id="roku">
+    <path id="Path_1" data-name="Path 1" class="cls-1" d="M57.61,36.36A17.2,17.2,0,0,0,40.5,19.08H32v34.4H40.5A17.16,17.16,0,0,0,57.61,36.36m38.61,68.58H65.07L40.33,70.61H32v34.26H4.56V2H43.89c22.68,0,41.19,15.43,41.19,34.4A33.43,33.43,0,0,1,67.19,64.59l29,40.36" transform="translate(-4.56 -1.96)"/>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M127.2,42.53c-7.25,0-13.42,9.86-13.42,22.06S120,86.66,127.2,86.66c7.42,0,13.57-9.87,13.57-22.07s-6.15-22.06-13.57-22.06m42.26,22.06a42.19,42.19,0,1,1-42.41-42h.15a42.06,42.06,0,0,1,42.26,41.86v.11M233.9,24.33,202.27,56V24.23H174.81v80.64h27.46V72.16l33,32.71h34.56l-42-42,34.78-34.75V76c0,15.89,9.55,30.56,33.62,30.56a38.11,38.11,0,0,0,27-12.35l12.35,10.65h5.86V24.33H314V76.5A15.39,15.39,0,0,1,300,85.29c-6.75,0-9.85-4-9.85-16.82V24.33Z" transform="translate(-4.56 -1.96)"/>
+  </g>
+</svg>

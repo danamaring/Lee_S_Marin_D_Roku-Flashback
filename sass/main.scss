@@ -1,1 +1,155 @@
 @import '_vars';
+
+
+//GENERAL STYLING
+.hidden {
+    display: none;
+}
+
+//login page
+#help {
+    background-color: $dark-grey;
+    height: 55px;
+
+    a {
+        color: white;
+        font-family: $main-font;
+        float: right;
+        margin-right: 5%;
+        margin-top: 5%;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+#stacked-logo {
+    img {
+        width: 55%;
+        margin-left: 20%;
+        margin-top: 25%;
+    }
+}
+
+.login-form {
+
+    .username-field, .password-field {
+
+        input {
+            font-family: $main-font;
+            color: $dark-grey;
+            padding: 15px 100px 15px 15px;
+            border-radius: 5px;
+            border: solid thin $dark-grey;
+            margin-top: 5%;
+            margin-left: 18%;
+        }
+    }
+
+    .submit-button {
+        button {
+            padding: 15px 15px 15px 15px;
+            border-radius: 5px;
+            width: 240px;
+            background-color: $purple;
+            color: white;
+            font-family: $main-font;
+            font-size: 1em;
+            margin-top: 5%;
+            margin-left: 18%;
+            text-align: center;
+        }
+    }
+}
+
+#new-to-roku {
+    a {
+        cursor: pointer;
+        color: $dark-grey;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+        font-family: $main-font;
+    }
+}
+
+//Adult home page
+header {
+    background-image: url(../images/frozen_home_banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+
+    #header-logo-roku {
+        backdrop-filter: blur(4px);
+        img {
+            width: 50%;
+            margin: 10px;
+        }
+    }
+}
+
+main {
+    background-color: $dark-grey;
+}
+
+//movies section
+#movies-section {
+    #trending-now {
+        margin-left: 5%;
+
+        h1 {
+            color: white;
+            font-family: $main-font;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        #movies-flexbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            img {
+                width: 75%;
+                margin-right: 20px;
+                position: relative;
+            }
+        }
+    }
+}
+
+//footer
+footer {
+    position: fixed;
+    background-color: $purple;
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            li {
+                width: 125px;
+                #more-icon {
+                    margin-top: 20px;
+                }
+                
+                a {
+                    img {
+                        width: 20%;
+                        margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
