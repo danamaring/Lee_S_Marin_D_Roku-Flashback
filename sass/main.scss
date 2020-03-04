@@ -7,6 +7,10 @@
 }
 
 //login page
+#login-container {
+    background-color: white;
+}
+
 #help {
     background-color: $dark-grey;
     height: 55px;
@@ -76,14 +80,14 @@
 }
 
 //Adult home page
-header {
+.header {
     background-image: url(../images/frozen_home_banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
 
-    #header-logo-roku {
+    .header-logo-roku {
         backdrop-filter: blur(4px);
         background-color: rgba(255, 255, 255, 0.29);
         img {
