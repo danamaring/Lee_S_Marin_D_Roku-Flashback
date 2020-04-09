@@ -1,0 +1,68 @@
+//login page
+#help {
+    background-color: $dark-grey;
+    height: 55px;
+
+    a {
+        color: white;
+        font-family: $main-font;
+        float: right;
+        margin-right: 5%;
+        margin-top: 5%;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+#stacked-logo {
+    img {
+        width: 55%;
+        margin-left: 20%;
+        margin-top: 25%;
+    }
+}
+
+.login-form {
+
+    .username-field, .password-field {
+
+        input {
+            font-family: $main-font;
+            color: $dark-grey;
+            padding: 15px 100px 15px 15px;
+            border-radius: 5px;
+            border: solid thin $dark-grey;
+            margin-top: 5%;
+            margin-left: 18%;
+        }
+    }
+
+    .submit-button {
+        button {
+            padding: 15px 15px 15px 15px;
+            border-radius: 5px;
+            width: 240px;
+            background-color: $purple;
+            color: white;
+            font-family: $main-font;
+            font-size: 1em;
+            margin-top: 5%;
+            margin-left: 18%;
+            text-align: center;
+        }
+    }
+}
+
+#new-to-roku {
+    a {
+        cursor: pointer;
+        color: $dark-grey;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+        font-family: $main-font;
+    }
+}

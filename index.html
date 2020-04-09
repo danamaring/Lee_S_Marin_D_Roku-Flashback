@@ -3,93 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Single-File JavaScript Component Demo</title>
 
-  <!-- CSS links -->
-   <link rel="stylesheet" href="css/reset.css">
-   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/master.css">
+  <!-- Fonts links -->
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 
-   <!-- Fonts links -->
-   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-   <!-- Vue links -->
-   <script src="https://unpkg.com/vue"></script>
-   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
-  <title>ROKU FLASHBACK</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
 <body>
-  <main id="app">
-    <div class="container-fluid">
-      <div class="row">
-        <header>
-          <div id="header-logo-roku">
-            <img src="images/logo_w_flashback-01.svg" alt="Logo Roku">
-          </div>
-          <nav class="float-right">
-            <ul>
-              <!-- <li>Kids</li> -->
-              <li v-if="authenticated"><i class="fas fa-user-circle"></i></li>
-              <li v-if="administrator"><i class="fas fa-cog"></i></li>
-              <li v-if="authenticated" v-on:click="logout()"><i class="fas fa-power-off"></i></li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-    </div> <!-- end container fluid -->
-
-    <section id="movies-section">
-      <h1 class="hidden">Movies to choose from...</h1>
-      <!-- movies trending now -->
-      <div id="trending-now">
-        <h1>Trending Now</h1>
-        <div id="movies-flexbox">
-          <img src="images/parasite_home_trending.jpg" alt="Parasite Thumbnail">
-          <img src="images/killingeve_home_trending.jpg" alt="Killing Eve Thumbnail">
-        </div>
-        <!-- movies recommended for you-->
-      <div id="recommended">
-        <h1>Recommended for you</h1>
-        <div id="movies-flexbox">
-          <img src="images/thesimpsons.jpg" alt="The Simpsons Thumbnail">
-          <img src="images/beautynbeast.jpg" alt="The beauty and the beast Thumbnail">
-          <img src="images/thebigbangtheory.jpg" alt="The big bang theory Thumbnail">
-      </div>
-
-      </div>
-    </section>
-    <!-- first thing in component templates should be a container -->
-    <router-view @authenticated="setAuthenticated"/>
-  </main>
-
-  <footer>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">
-            <img src="images/home_icon.svg" alt="Home">
-          </a>
-        </li>
-        <li>
-          <a href="index.html">
-            <img src="images/search_icon.svg" alt="Search">
-          </a>
-        </li>
-        <li id="more-icon">
-          <a href="index.html">
-            <img  src="images/more_icon.svg" alt="More">
-          </a>
-        </li>
-      </ul>
-    </nav>
-    
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script type="module" src="js/main.js"></script>
-</body>
-
-</html>
+	<main id="app">
+		<div class="container-fluid">
+			<div class="row">
+				<header class="col-sm-12 fixed-top">
+					<img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
+					<nav class="float-right">
+					<ul>
+						<!-- <li>Kids</li> -->            
+						<router-link to="/users"><li v-if="authenticated"><i class="fas fa-user-circle"></i></li></router-link>
+						<li v-if="administrator"><i class="fas fa-cog"></i></li>
+						<li v-if="authenticated" v-on:click="logout()"><i class="fas fa-power-off"></i></li>					
+					</ul>
+					</nav>
+				</header>
+			</div>
+		</div> <!-- end container fluid -->
+		
+		<!-- first thing in component templates should be a container -->
+		<router-view @authenticated="setAuthenticated"/>	
+	
+		</main>
+	
+		<footer>
+			<div class="row">
+				<nav class="col-12 col-sm-3 side-nav footer-nav">
+					<ul class="media-type">
+						<li><i class="fas fa-home"></i></li>
+						<li><i class="fas fa-search"></i></li>
+						<li>
+							<a href="#"><i class="fas fa-sort-up"></i></li></a>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	
+		<script type="module" src="js/main.js"></script>
+	</body>
+	</html>
