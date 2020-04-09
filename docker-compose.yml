@@ -6,7 +6,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8080:80
+      - 8090:80
     volumes:
       - ./:/var/www/html/
     environment:
@@ -19,10 +19,10 @@ services:
       - ./db:/docker-entrypoint-initdb.d
     restart: always
     ports:
-      - 8899:3306
+      - 8999:3306
     environment:
       TZ: America/Toronto
-      MYSQL_DATABASE: db_movies
+      MYSQL_DATABASE: db_roku
       MYSQL_USER: docker_u
       MYSQL_PASSWORD: docker_p
       MYSQL_ROOT_PASSWORD: root
@@ -33,7 +33,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8081:80
+      - 8091:80
     environment:
       PMA_USER: docker_u
       PMA_PASSWORD: docker_p
