@@ -6,17 +6,11 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8010:80
+      - 8080:80
     volumes:
       - ./:/var/www/html/
     environment:
       IDP_ENVIRONMENT: docker
-
-    # email:
-    #   image: mailhog/mailhog
-    #   ports:
-    #     - 1025:1025
-    #     - 8025:8025
 
   mysql:
     image: mariadb:10.3
@@ -25,10 +19,10 @@ services:
       - ./db:/docker-entrypoint-initdb.d
     restart: always
     ports:
-      - 1215:3306
+      - 8899:3306
     environment:
       TZ: America/Toronto
-      MYSQL_DATABASE: db_roku-flashback
+      MYSQL_DATABASE: db_movies
       MYSQL_USER: docker_u
       MYSQL_PASSWORD: docker_p
       MYSQL_ROOT_PASSWORD: root
@@ -39,7 +33,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8011:80
+      - 8081:80
     environment:
       PMA_USER: docker_u
       PMA_PASSWORD: docker_p

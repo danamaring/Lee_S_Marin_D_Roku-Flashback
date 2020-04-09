@@ -4,10 +4,9 @@ html { position: relative; min-height: 100%; }
 
 body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: black;
+	background-color: rgb(33, 33, 33);
 	color: white;
 	margin-bottom: 100px;
-	background: url(../images/gunmetal.jpg) repeat;
 }
 
 a {
@@ -16,11 +15,12 @@ a {
 }
 
 header {
-	background-color:$dark-bg;
+	background-color: transparent;
 	padding: 12px 14px;
 	position: fixed;
 	z-index: 500;
-	width: 100%; 
+	width: 100%;
+	backdrop-filter: blur(10px); 
 
 	span {
 		margin-left: 15px;
@@ -71,3 +71,44 @@ nav:not(.side-nav) {
 }
 
 .user-message { text-align: center; font-size: 2rem; }
+
+
+//hero
+.hero-movies {
+	background-image: url(../images/frozen_home_banner.jpg);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.index-header {
+	font-family: $main-font;
+	color: white;
+	font-size: 1.2em;
+    letter-spacing: 2px;
+	margin: .5em 0 0.5em 1em;
+}
+
+.filterNav {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	ul {
+		display: flex;
+		justify-content: center;
+
+		li {
+			a {
+				color: $light-grey;
+				font-size: 1em;
+				font-family: $main-font;
+				margin: 1em 0;
+			}
+		}
+	}
+}
+
+#kids {
+	background-color: white;
+}
