@@ -1,44 +1,39 @@
-# Roku Flashback Project
+# ROKU FLASHBACK STREAMING APP
+## Authoring 4 - Team Build
+Roku Flashback is an streaming app designed to display movies, tv shows and music from the 50's, 60's, 70's, 80's and 90's. It has different functionalities such as profiles that filter the content depending on the users age. 
 
-### Take a trip back to yesteryear with your old audio, tv and film faves!
+## Description
 
-#### Setup
-You have some options - Docker, or old school. 
+The project required two rolls: graphic designer and web developer. Some of the sofware used includes WAMP stack (such as MySQL and PHP), Vue.js as the main framework for JS, among others.
 
-If you're using a traditional PHP platform, then clone the repo to your localhost location (htdocs, www directory or wherever your local server expects to find your files).
+The Designer role was to design the look and feel of a mobile-first web application based on the supplied brief (Roku
+Flashback) using interactive elements, including what might be required in terms of Single Page Applications
+(SPA), hybrid multipage applications, and data transactions (preloaders, microtransactions,
+flash messaging etc).
 
-This is built with PHP on the back end, so you can either install the db_movies database with the tool of your choice, or drop the crutches and use the command line!. Configure your connection settings and you're ready to go.
+The Developer role was to create the proper project stucture, create and use database assets and research and implement how to include social media APIs (Facebook, Twitter, etc) to like, share, and comment / rate on each of the individual multimedia selections. 
 
-Or you can let Docker do its thing.  
+## Getting Started
 
-If you don't have Docker installed, you'll need to get it [here](http://www.docker.com).
+### Dependencies
 
-CD into the project directory and run docker-compose up  
-When you're done, run docker-compose down
+* HTML5
+* CSS3
+* SASS/CSS
+* AJAX/JS
+* VUE.js
 
-Your app is running on http://localhost:8010  
-phpmyadmin is running on http://localhost:8011
+## Authors
 
+* [Dana Marin Garcia](https://github.com/danamaring)
+* [Sujin Lee](https://github.com/sujinlee39)
 
-#### Dependencies:
-We've rolled our own PHP - no frameworks, just some classes and a bit of procedural code.
+## License
+* MIT
 
-We use Vue on the front end, but not the CLI or webpack - just Vue with ES6 modules. Also - no jQuery, just plain old JavaScript.
+## Acknowledgments
 
-We use Gulp for tooling - check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.
-
-We also use SASS.
-
-#### Built with:
-Vue (bare bones - no webpack!)
-
-vue-router
-
-Boostrap 4
-
-PHP
-
-JavaScript
-
-#### Authors / Dev Team:
-TVR and SpiderPan
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [README Formatting](https://guides.github.com/features/mastering-markdown/)
+* [MeyerWeb CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+* [Vue.js](https://vuejs.org/)
