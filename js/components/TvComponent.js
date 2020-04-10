@@ -9,6 +9,11 @@ export default {
                 <p class="media-details" v-html="currentMediaDetails.tv_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.tv_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.tv_year}}</span>
+                <div>
+                <!-- replace the link when the site is live -->
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>            
+                    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="3"></div>
+                </div>            
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
