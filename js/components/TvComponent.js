@@ -1,24 +1,25 @@
 export default {
-    name: "TheAudioComponent",
+    name: "TheVideoComponent",
 
     template: `
     <section>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
-                <h4 class="media-title">{{currentMediaDetails.music_title}}</h4>
-                <p class="media-details" v-html="currentMediaDetails.music_lyrics"></p>
-                <span class="media-year">{{currentMediaDetails.music_year}}</span>
+                <h4 class="media-title">{{currentMediaDetails.tv_title}}</h4>
+                <p class="media-details" v-html="currentMediaDetails.tv_storyline"></p>
+                <span class="media-time">{{currentMediaDetails.tv_runtime}}</span>
+                <span class="media-year">{{currentMediaDetails.tv_year}}</span>
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'images/' + currentMediaDetails.music_audio" class="fs-video"></video>
+                <video autoplay controls muted :src="'images/' + currentMediaDetails.tv_trailer" class="fs-video"></video>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.music_cover" alt="media
+                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.tv_cover" alt="media
                     thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left
                     media-thumb">
                 </div>
@@ -44,7 +45,7 @@ export default {
             // debugger;
 
             if (localStorage.getItem("cachedVideo")) {
-                let url = `./admin/index.php?media=music`;
+                let url = `./admin/index.php?media=tv`;
 
                 fetch(url)
                     .then(res => res.json())

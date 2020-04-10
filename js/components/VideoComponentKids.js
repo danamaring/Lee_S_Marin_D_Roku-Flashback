@@ -3,7 +3,6 @@ export default {
 
     template: `
     <section>
-        <h1>HEYO KIDDOOSS.</h1>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetailsKids.movies_title}}</h4>
