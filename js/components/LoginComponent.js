@@ -7,6 +7,12 @@ export default {
             <div id="stacked-logo">
                 <img src="images/logo-stacked.svg" alt="Roku Flashback Logo">
             </div>
+            <div id="welcome">
+                <p>Welcome to Roku Flashback!</p>
+                <br>
+                <p>Please enjoy Tv shows, 
+                Movies and Musics.</p>
+            </div>
             <form>
                 <div class="login-form">
                     <div class="username-field">
@@ -24,9 +30,11 @@ export default {
                     </div>
                 </div>
                 <div id="new-to-roku">
-                    <a href="sign-up.html">New to Roku? Sign up now.</a>
+                    <a href="sign-up.html">New to Roku?  Sign up now.</a>
                 </div>
-            </form>  
+            </form>
+
+            
         </div>
      `,
 
