@@ -1,58 +1,19 @@
-<section>
-    <h1>HEYO KIDDOOSS.</h1>
-    <div class="row">
-        <div class="col-12 order-2 order-md-1 col-md-3 media-container">
-            <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
-            <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
-            <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
-            <span class="media-year">{{currentMediaDetails.movies_year}}</span>
-        </div>
-        <!-- replace the link when the site is live -->
-        <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-            <video autoplay controls muted :src="currentMediaDetails.movies_trailer" class="fs-video"></video>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-sm-9">
-            <div class="thumb-wrapper clearfix">
-                <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media
-                thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left
-                media-thumb">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<div id="container">
-    <div id="help">
-        <a href="help.html">Help</a>
-    </div>
-    <div id="stacked-logo">
-        <img src="images/logo-stacked.svg" alt="Roku Flashback Logo">
-    </div>
-    <form @submit.prevent="login">
-        <div class="login-form">
-            <div class="username-field">
-                <label for="inlineFormInputName"></label>
-                <input v-model="input.username" type="text" placeholder="username" required>
-            </div>
-
-            <div class="password-field">
-                <label for="inlineFormPassword"></label>
-                <input v-model="input.password" type="password" placeholder="password" required>
-            </div>
-
-            <div class="submit-button">
-                <button v-on:click.prevent="login()" type="submit">Sign In</button>
-            </div>
-        </div>
-        <div id="new-to-roku">
-            <a href="sign-up.html">New to Roku? Sign up now.</a>
-        </div>
-    </form>  
+<div class="col-12 col-sm-9 media-info">
+    <ul class="media-genres">
+        <li>
+            <a href="action" @click.prevent="filterMedia('action')">Action</a>
+        </li>
+        <li>
+            <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
+        </li>
+        <li>
+            <a href="family" @click.prevent="filterMedia('family')">Family</a>
+        </li>
+        <li>
+            <a href="horror" @click.prevent="filterMedia('fantasy')">Fantasy</a>
+        </li>
+        <li>
+            <a href="horror" @click.prevent="retrieveVideoContent">All</a>
+        </li>
+    </ul>
 </div>

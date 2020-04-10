@@ -31,8 +31,7 @@ function getSingleMovie($tbl, $col, $id)
 
 }
 
-function getMoviesByFilter($args)
-{
+function getMoviesByFilter($args) {
     $pdo = Database::getInstance()->getConnection();
 
     $filterQuery = 'SELECT * FROM ' . $args['tbl'] . ' AS t, ' . $args['tbl2'] . ' AS t2, ' . $args['tbl3'] . ' AS t3';
@@ -42,8 +41,28 @@ function getMoviesByFilter($args)
 
     $results = $pdo->query($filterQuery);
 
-    echo $filterQuery;
-    exit;
+    // echo $filterQuery;
+    // exit;
+
+    if ($results) {
+        return $results;
+    } else {
+        return 'There was a problem accessing this info';
+    }
+}
+
+function getTvByFilter($args_tv) {
+    $pdo = Database::getInstance()->getConnection();
+
+    $filterQuery = 'SELECT * FROM ' . $args_tv['tbl'] . ' AS t, ' . $args_tv['tbl2'] . ' AS t2, ' . $args_tv['tbl3'] . ' AS t3';
+    $filterQuery .= ' WHERE t.' . $args_tv['col'] . ' = t3.' . $args_tv['col'];
+    $filterQuery .= ' AND t2.' . $args_tv['col2'] . ' = t3.' . $args_tv['col2'];
+    $filterQuery .= ' AND t2.' . $args_tv['col3'] . ' = "' . $args_tv['filter'] . '"';
+
+    $results = $pdo->query($filterQuery);
+
+    // echo $filterQuery;
+    // exit;
 
     if ($results) {
         return $results;

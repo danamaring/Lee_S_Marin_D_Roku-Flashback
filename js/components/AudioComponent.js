@@ -15,8 +15,8 @@ export default {
                 </div>            
             </div>
 
-            <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'images/' + currentMediaDetails.music_audio" class="fs-video"></video>
+            <div>
+                <audio autoplay controls :src="'images/' + currentMediaDetails.music_audio"></audio>
             </div>
         </div>
 
