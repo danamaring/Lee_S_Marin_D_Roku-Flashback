@@ -1,4 +1,5 @@
 import VideoComponentKids from "./VideoComponentKids.js";
+import TvComponentKids from "./TvComponentKids.js";
 import AudioComponent from "./AudioComponent.js";
 
 
@@ -9,7 +10,6 @@ export default {
 
     template: `
     <div id="kids">
-        <h1>THIS IS A KIDS PAGE.</h1>
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->
@@ -35,7 +35,7 @@ export default {
             
             mediaTypes: [
                 { iconClass: "fas fa-film", description: "Movies", component: VideoComponentKids },
-                { iconClass: "fas fa-tv", description: "Television", component: VideoComponentKids },
+                { iconClass: "fas fa-tv", description: "Television", component: TvComponentKids },
                 { iconClass: "fas fa-headphones", description: "Music", component: AudioComponent }
             ]
         }
