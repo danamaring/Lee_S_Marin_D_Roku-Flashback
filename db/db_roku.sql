@@ -2,10 +2,10 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql
--- Generation Time: Apr 10, 2020 at 12:37 AM
--- Server version: 10.3.21-MariaDB-1:10.3.21+maria~bionic
--- PHP Version: 7.2.23
+-- Servidor: mysql
+-- Tiempo de generación: 10-04-2020 a las 05:42:42
+-- Versión del servidor: 10.3.21-MariaDB-1:10.3.21+maria~bionic
+-- Versión de PHP: 7.2.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_roku`
+-- Base de datos: `db_roku`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_arating`
+-- Estructura de tabla para la tabla `tbl_arating`
 --
 
 CREATE TABLE `tbl_arating` (
@@ -35,7 +35,7 @@ CREATE TABLE `tbl_arating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_arating`
+-- Volcado de datos para la tabla `tbl_arating`
 --
 
 INSERT INTO `tbl_arating` (`arating_id`, `arating_name`, `arating_desc`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `tbl_arating` (`arating_id`, `arating_name`, `arating_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_artist`
+-- Estructura de tabla para la tabla `tbl_artist`
 --
 
 CREATE TABLE `tbl_artist` (
@@ -57,7 +57,7 @@ CREATE TABLE `tbl_artist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_artist`
+-- Volcado de datos para la tabla `tbl_artist`
 --
 
 INSERT INTO `tbl_artist` (`artist_id`, `artist_name`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `tbl_artist` (`artist_id`, `artist_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_comments`
+-- Estructura de tabla para la tabla `tbl_comments`
 --
 
 CREATE TABLE `tbl_comments` (
@@ -86,7 +86,7 @@ CREATE TABLE `tbl_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_director`
+-- Estructura de tabla para la tabla `tbl_director`
 --
 
 CREATE TABLE `tbl_director` (
@@ -95,7 +95,7 @@ CREATE TABLE `tbl_director` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_director`
+-- Volcado de datos para la tabla `tbl_director`
 --
 
 INSERT INTO `tbl_director` (`director_id`, `director_name`) VALUES
@@ -116,7 +116,7 @@ INSERT INTO `tbl_director` (`director_id`, `director_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_genre`
+-- Estructura de tabla para la tabla `tbl_genre`
 --
 
 CREATE TABLE `tbl_genre` (
@@ -125,7 +125,7 @@ CREATE TABLE `tbl_genre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_genre`
+-- Volcado de datos para la tabla `tbl_genre`
 --
 
 INSERT INTO `tbl_genre` (`genre_id`, `genre_name`) VALUES
@@ -149,7 +149,7 @@ INSERT INTO `tbl_genre` (`genre_id`, `genre_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_movies`
+-- Estructura de tabla para la tabla `tbl_movies`
 --
 
 CREATE TABLE `tbl_movies` (
@@ -164,7 +164,7 @@ CREATE TABLE `tbl_movies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_movies`
+-- Volcado de datos para la tabla `tbl_movies`
 --
 
 INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
@@ -182,7 +182,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_y
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_movies_kids`
+-- Estructura de tabla para la tabla `tbl_movies_kids`
 --
 
 CREATE TABLE `tbl_movies_kids` (
@@ -197,7 +197,7 @@ CREATE TABLE `tbl_movies_kids` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_movies_kids`
+-- Volcado de datos para la tabla `tbl_movies_kids`
 --
 
 INSERT INTO `tbl_movies_kids` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
@@ -209,7 +209,7 @@ INSERT INTO `tbl_movies_kids` (`movies_id`, `movies_cover`, `movies_title`, `mov
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mov_director`
+-- Estructura de tabla para la tabla `tbl_mov_director`
 --
 
 CREATE TABLE `tbl_mov_director` (
@@ -219,7 +219,7 @@ CREATE TABLE `tbl_mov_director` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mov_director`
+-- Volcado de datos para la tabla `tbl_mov_director`
 --
 
 INSERT INTO `tbl_mov_director` (`mov_director_id`, `movies_id`, `director_id`) VALUES
@@ -241,7 +241,7 @@ INSERT INTO `tbl_mov_director` (`mov_director_id`, `movies_id`, `director_id`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mov_genre`
+-- Estructura de tabla para la tabla `tbl_mov_genre`
 --
 
 CREATE TABLE `tbl_mov_genre` (
@@ -251,7 +251,7 @@ CREATE TABLE `tbl_mov_genre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mov_genre`
+-- Volcado de datos para la tabla `tbl_mov_genre`
 --
 
 INSERT INTO `tbl_mov_genre` (`mov_genre_id`, `movies_id`, `genre_id`) VALUES
@@ -282,7 +282,7 @@ INSERT INTO `tbl_mov_genre` (`mov_genre_id`, `movies_id`, `genre_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_music`
+-- Estructura de tabla para la tabla `tbl_music`
 --
 
 CREATE TABLE `tbl_music` (
@@ -295,7 +295,7 @@ CREATE TABLE `tbl_music` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_music`
+-- Volcado de datos para la tabla `tbl_music`
 --
 
 INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_year`, `music_lyrics`, `music_audio`) VALUES
@@ -311,7 +311,7 @@ INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_year`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mu_artist`
+-- Estructura de tabla para la tabla `tbl_mu_artist`
 --
 
 CREATE TABLE `tbl_mu_artist` (
@@ -321,7 +321,7 @@ CREATE TABLE `tbl_mu_artist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mu_artist`
+-- Volcado de datos para la tabla `tbl_mu_artist`
 --
 
 INSERT INTO `tbl_mu_artist` (`mu_artist_id`, `music_id`, `artist_id`) VALUES
@@ -337,7 +337,7 @@ INSERT INTO `tbl_mu_artist` (`mu_artist_id`, `music_id`, `artist_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mu_genre`
+-- Estructura de tabla para la tabla `tbl_mu_genre`
 --
 
 CREATE TABLE `tbl_mu_genre` (
@@ -347,7 +347,7 @@ CREATE TABLE `tbl_mu_genre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mu_genre`
+-- Volcado de datos para la tabla `tbl_mu_genre`
 --
 
 INSERT INTO `tbl_mu_genre` (`mu_genre_id`, `music_id`, `genre_id`) VALUES
@@ -366,7 +366,7 @@ INSERT INTO `tbl_mu_genre` (`mu_genre_id`, `music_id`, `genre_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_tv`
+-- Estructura de tabla para la tabla `tbl_tv`
 --
 
 CREATE TABLE `tbl_tv` (
@@ -379,27 +379,22 @@ CREATE TABLE `tbl_tv` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_tv`
+-- Volcado de datos para la tabla `tbl_tv`
 --
 
 INSERT INTO `tbl_tv` (`tv_id`, `tv_cover`, `tv_title`, `tv_year`, `tv_storyline`, `tv_trailer`) VALUES
-(1, 'flintstones.jpg', 'The Flintstones', '1960', 'The Flintstones were the modern Stone Age family. Residing in Bedrock, Fred Flintstone worked an unsatisfying quarry job, but returned home to lovely wife Wilma and eventually daughter Pebbles. Fred, a big fan of golf and bowling, also enjoyed bullying neighbor Barney Rubble, while Barney\'s saucy wife Betty was best friends with Wilma. During the show\'s run, Barney and Betty would adopt an unnaturally strong son, Bamm-Bamm, who would become friends with little Pebbles. \"The Flintstones,\" heavily inspired by \"The Honeymooners,\" convinced a generation of children that dinosaurs and humans occupied the planet at the same time.', 'flintstones.mp4'),
 (2, 'fullhouse.jpg', 'Full House', '1987', 'Danny is a widower who is raising his three little girls after the death of his wife. But he has help from his musician brother-in-law, Jesse Katsopolis, and his best friend, comedian Joey Gladstone.', 'fullhouse.mp4'),
 (3, 'simpsons.jpg', 'The Simpsons', '1989', 'Working-class father Homer Simpson and his dysfunctional family deal with comical situations and the ups-and-downs of life in the town of Springfield.', 'simpsons.mp4'),
 (4, 'bugsbunnyshow.jpg', 'The Bugs Bunny Show', '1960', 'Frenzied, frantic fun with the cheeky, crafty, carrot-chomping, wise-cracking Bugs Bunny.', 'bugsbunnyshow.mp4'),
 (5, 'friends.jpg', 'Friends', '1994', 'Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.', 'friends.mp4'),
 (6, 'startrek.jpg', 'Star Trek: The Original Series', '1966', 'James T Kirk, who is the captain of the Starship Enterprise, explores the whole galaxy with his crew and goes on several adventures as they fight evil forces together.', 'startrek.mp4'),
 (7, 'happydays.jpg', 'Happy Days', '1974', 'Set in 1950s and 1960s Milwaukee, this series tells the story of the Cunningham family -- father Howard, mother Marion, son Richie and daughter Joanie. Howard owns a hardware store, while Marion stays at home. Richie\'s best friends are Potsie and Ralph. Arthur \"Fonzie\" Fonzarelli is the local bad boy, riding a motorcycle and filling his days with fixing cars and dating girls. During the show\'s run, Richie leaves home to join the U.S. Army.', 'happydays.mp4'),
-(8, 'tyler.jpg', 'The Mary Tyler Moore Show', '1970', 'Mary Richards, a single career-oriented woman, moves to Minneapolis after she separates from her partner. She gets a new job but continues to struggle with romance.', 'tyler.mp4'),
-(9, 'pink.jpg', 'The Pink Panther Show', '1969', 'The Pink Panther Show is a showcase of animated shorts produced by David H. DePatie and Friz Freleng between 1969 and 1978, starring the animated Pink Panther character from the opening credits of the live-action films.', 'pink.mp4'),
-(10, 'chipmunks.jpg', 'Alvin and the Chipmunks', '1983', 'Three chipmunk brothers, Alvin, Simon and Theodore drive their manager crazy.', 'chipmunks.mp4'),
-(11, 'snoopy.jpg', 'The Charlie Brown and Snoopy Show', '1983', 'The animated adventures of Charlie Brown, Snoopy and the rest of the Peanuts gang.', 'snoopy.mp4'),
-(12, 'bus.jpg', 'The Magic School Bus', '1994', 'Scholastic\'s \"The Magic School Bus\" follows Ms. Frizzle and her class as they set off on field trips. Based on the best-selling book series of the same name, \"The Magic School Bus\" takes kids on a virtual bus ride. Magically transforming into a plane, submarine, spaceship or surfboard, this bus carries Ms. Frizzle and her students on super adventures and teaches them about science.', 'bus.mp4');
+(8, 'tyler.jpg', 'The Mary Tyler Moore Show', '1970', 'Mary Richards, a single career-oriented woman, moves to Minneapolis after she separates from her partner. She gets a new job but continues to struggle with romance.', 'tyler.mp4');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_tv_genre`
+-- Estructura de tabla para la tabla `tbl_tv_genre`
 --
 
 CREATE TABLE `tbl_tv_genre` (
@@ -409,7 +404,7 @@ CREATE TABLE `tbl_tv_genre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_tv_genre`
+-- Volcado de datos para la tabla `tbl_tv_genre`
 --
 
 INSERT INTO `tbl_tv_genre` (`tv_genre_id`, `tv_id`, `genre_id`) VALUES
@@ -429,7 +424,7 @@ INSERT INTO `tbl_tv_genre` (`tv_genre_id`, `tv_id`, `genre_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_tv_kids`
+-- Estructura de tabla para la tabla `tbl_tv_kids`
 --
 
 CREATE TABLE `tbl_tv_kids` (
@@ -442,19 +437,20 @@ CREATE TABLE `tbl_tv_kids` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_tv_kids`
+-- Volcado de datos para la tabla `tbl_tv_kids`
 --
 
 INSERT INTO `tbl_tv_kids` (`tv_id`, `tv_cover`, `tv_title`, `tv_year`, `tv_storyline`, `tv_trailer`) VALUES
 (9, 'pink.jpg', 'The Pink Panther Show', '1969', 'The Pink Panther Show is a showcase of animated shorts produced by David H. DePatie and Friz Freleng between 1969 and 1978, starring the animated Pink Panther character from the opening credits of the live-action films.', 'pink.mp4'),
 (10, 'chipmunks.jpg', 'Alvin and the Chipmunks', '1983', 'Three chipmunk brothers, Alvin, Simon and Theodore drive their manager crazy.', 'chipmunks.mp4'),
 (11, 'snoopy.jpg', 'The Charlie Brown and Snoopy Show', '1983', 'The animated adventures of Charlie Brown, Snoopy and the rest of the Peanuts gang.', 'snoopy.mp4'),
-(12, 'bus.jpg', 'The Magic School Bus', '1994', 'Scholastic\'s \"The Magic School Bus\" follows Ms. Frizzle and her class as they set off on field trips. Based on the best-selling book series of the same name, \"The Magic School Bus\" takes kids on a virtual bus ride. Magically transforming into a plane, submarine, spaceship or surfboard, this bus carries Ms. Frizzle and her students on super adventures and teaches them about science.', 'bus.mp4');
+(12, 'bus.jpg', 'The Magic School Bus', '1994', 'Scholastic\'s \"The Magic School Bus\" follows Ms. Frizzle and her class as they set off on field trips. Based on the best-selling book series of the same name, \"The Magic School Bus\" takes kids on a virtual bus ride. Magically transforming into a plane, submarine, spaceship or surfboard, this bus carries Ms. Frizzle and her students on super adventures and teaches them about science.', 'bus.mp4'),
+(13, 'flintstones.jpg', 'The Flintstones', '1960', 'The Flintstones were the modern Stone Age family. Residing in Bedrock, Fred Flintstone worked an unsatisfying quarry job, but returned home to lovely wife Wilma and eventually daughter Pebbles. Fred, a big fan of golf and bowling, also enjoyed bullying neighbor Barney Rubble, while Barney\'s saucy wife Betty was best friends with Wilma. During the show\'s run, Barney and Betty would adopt an unnaturally strong son, Bamm-Bamm, who would become friends with little Pebbles. \"The Flintstones,\" heavily inspired by \"The Honeymooners,\" convinced a generation of children that dinosaurs and humans occupied the planet at the same time.', 'flintstones.mp4');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_urating`
+-- Estructura de tabla para la tabla `tbl_urating`
 --
 
 CREATE TABLE `tbl_urating` (
@@ -465,7 +461,7 @@ CREATE TABLE `tbl_urating` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Estructura de tabla para la tabla `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -476,189 +472,189 @@ CREATE TABLE `tbl_user` (
   `user_email` varchar(250) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `user_ip` varchar(50) NOT NULL,
-  `user_avatar` varchar(20) NOT NULL,
+  `user_avatar` varchar(20) DEFAULT NULL,
   `user_permission` int(11) NOT NULL,
   `user_admin` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_user`
+-- Volcado de datos para la tabla `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permission`, `user_admin`) VALUES
 (1, 'Dana', 'danamaring', 'password', 'dana@email.com', '2020-04-09 22:59:25', '172.27.0.1', 'dana', 1, 1),
 (2, 'Sujin', 'sujinlee', 'password', 'sujin@email.com', '2020-04-09 22:59:25', '', 'sujin', 1, 1),
-(3, 'Trevor', 'trevorvanrys', 'password', 'trevor@email.com', '2020-04-09 23:01:35', '', '', 1, 1),
-(4, 'Madelaine', 'user4', 'password', 'madelaine@email.com', '2020-04-09 23:01:35', '', '', 0, 0),
-(5, 'Isabelle', 'user5', 'password', 'isabelle@email.com', '2020-04-09 23:02:32', '', '', 0, 0),
-(6, 'Serena', 'user6', 'password', 'serena@email.com', '2020-04-09 23:02:32', '', '', 0, 0);
+(3, 'Trevor', 'trevorvanrys', 'password', 'trevor@email.com', '2020-04-09 23:01:35', '', NULL, 1, 1),
+(4, 'Madelaine', 'user4', 'password', 'madelaine@email.com', '2020-04-09 23:01:35', '', NULL, 0, 0),
+(5, 'Isabelle', 'user5', 'password', 'isabelle@email.com', '2020-04-09 23:02:32', '', NULL, 0, 0),
+(6, 'Serena', 'user6', 'password', 'serena@email.com', '2020-04-09 23:02:32', '', NULL, 0, 0);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `tbl_arating`
+-- Indices de la tabla `tbl_arating`
 --
 ALTER TABLE `tbl_arating`
   ADD PRIMARY KEY (`arating_id`);
 
 --
--- Indexes for table `tbl_artist`
+-- Indices de la tabla `tbl_artist`
 --
 ALTER TABLE `tbl_artist`
   ADD PRIMARY KEY (`artist_id`);
 
 --
--- Indexes for table `tbl_comments`
+-- Indices de la tabla `tbl_comments`
 --
 ALTER TABLE `tbl_comments`
   ADD PRIMARY KEY (`comments_id`);
 
 --
--- Indexes for table `tbl_director`
+-- Indices de la tabla `tbl_director`
 --
 ALTER TABLE `tbl_director`
   ADD PRIMARY KEY (`director_id`);
 
 --
--- Indexes for table `tbl_genre`
+-- Indices de la tabla `tbl_genre`
 --
 ALTER TABLE `tbl_genre`
   ADD PRIMARY KEY (`genre_id`);
 
 --
--- Indexes for table `tbl_movies`
+-- Indices de la tabla `tbl_movies`
 --
 ALTER TABLE `tbl_movies`
   ADD PRIMARY KEY (`movies_id`);
 
 --
--- Indexes for table `tbl_movies_kids`
+-- Indices de la tabla `tbl_movies_kids`
 --
 ALTER TABLE `tbl_movies_kids`
   ADD PRIMARY KEY (`movies_id`);
 
 --
--- Indexes for table `tbl_mov_director`
+-- Indices de la tabla `tbl_mov_director`
 --
 ALTER TABLE `tbl_mov_director`
   ADD PRIMARY KEY (`mov_director_id`);
 
 --
--- Indexes for table `tbl_mov_genre`
+-- Indices de la tabla `tbl_mov_genre`
 --
 ALTER TABLE `tbl_mov_genre`
   ADD PRIMARY KEY (`mov_genre_id`);
 
 --
--- Indexes for table `tbl_music`
+-- Indices de la tabla `tbl_music`
 --
 ALTER TABLE `tbl_music`
   ADD PRIMARY KEY (`music_id`);
 
 --
--- Indexes for table `tbl_mu_artist`
+-- Indices de la tabla `tbl_mu_artist`
 --
 ALTER TABLE `tbl_mu_artist`
   ADD KEY `mu_artist_id` (`mu_artist_id`);
 
 --
--- Indexes for table `tbl_mu_genre`
+-- Indices de la tabla `tbl_mu_genre`
 --
 ALTER TABLE `tbl_mu_genre`
   ADD KEY `mu_genre_id` (`mu_genre_id`);
 
 --
--- Indexes for table `tbl_tv`
+-- Indices de la tabla `tbl_tv`
 --
 ALTER TABLE `tbl_tv`
   ADD PRIMARY KEY (`tv_id`);
 
 --
--- Indexes for table `tbl_tv_genre`
+-- Indices de la tabla `tbl_tv_genre`
 --
 ALTER TABLE `tbl_tv_genre`
   ADD PRIMARY KEY (`tv_genre_id`);
 
 --
--- Indexes for table `tbl_tv_kids`
+-- Indices de la tabla `tbl_tv_kids`
 --
 ALTER TABLE `tbl_tv_kids`
   ADD PRIMARY KEY (`tv_id`);
 
 --
--- Indexes for table `tbl_urating`
+-- Indices de la tabla `tbl_urating`
 --
 ALTER TABLE `tbl_urating`
   ADD PRIMARY KEY (`rating_id`);
 
 --
--- Indexes for table `tbl_user`
+-- Indices de la tabla `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `tbl_artist`
+-- AUTO_INCREMENT de la tabla `tbl_artist`
 --
 ALTER TABLE `tbl_artist`
   MODIFY `artist_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tbl_director`
+-- AUTO_INCREMENT de la tabla `tbl_director`
 --
 ALTER TABLE `tbl_director`
   MODIFY `director_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tbl_genre`
+-- AUTO_INCREMENT de la tabla `tbl_genre`
 --
 ALTER TABLE `tbl_genre`
   MODIFY `genre_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `tbl_movies`
+-- AUTO_INCREMENT de la tabla `tbl_movies`
 --
 ALTER TABLE `tbl_movies`
   MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `tbl_movies_kids`
+-- AUTO_INCREMENT de la tabla `tbl_movies_kids`
 --
 ALTER TABLE `tbl_movies_kids`
   MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `tbl_mov_director`
+-- AUTO_INCREMENT de la tabla `tbl_mov_director`
 --
 ALTER TABLE `tbl_mov_director`
   MODIFY `mov_director_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `tbl_mov_genre`
+-- AUTO_INCREMENT de la tabla `tbl_mov_genre`
 --
 ALTER TABLE `tbl_mov_genre`
   MODIFY `mov_genre_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `tbl_tv_genre`
+-- AUTO_INCREMENT de la tabla `tbl_tv_genre`
 --
 ALTER TABLE `tbl_tv_genre`
   MODIFY `tv_genre_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `tbl_urating`
+-- AUTO_INCREMENT de la tabla `tbl_urating`
 --
 ALTER TABLE `tbl_urating`
   MODIFY `rating_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT de la tabla `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
