@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Apr 09, 2020 at 11:04 PM
--- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- Host: mysql
+-- Generation Time: Apr 10, 2020 at 12:37 AM
+-- Server version: 10.3.21-MariaDB-1:10.3.21+maria~bionic
+-- PHP Version: 7.2.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_roku1`
+-- Database: `db_roku`
 --
 
 -- --------------------------------------------------------
@@ -78,7 +80,7 @@ CREATE TABLE `tbl_comments` (
   `comments_id` mediumint(8) UNSIGNED NOT NULL,
   `comments_auth` varchar(125) NOT NULL,
   `comments_copy` text NOT NULL,
-  `comments_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `comments_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -171,11 +173,34 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_y
 (3, 'et.jpg', 'E.T. the Extra-Terrestrial', '1982', '2h 1m', 'An alien is left behind on Earth and is saved by young Elliot who decides to keep him hidden. While the task force hunts for it, Elliot and his siblings form an emotional bond with their new friend.', 'et.mp4', 'June 10, 1982'),
 (4, 'life.jpg', 'Life Is Beautiful', '1997', '2h 2m', 'A Jewish father and his family are surrounded by Nazi death camps. Living in a hostile environment, he uses humor to shield his young son from the grim realities of war.', 'life.mp4', 'November 6, 1998'),
 (5, 'notting.jpg', 'Notting Hill', '1999', '2h 4m', 'William, a British bookseller, meets and falls in love with Anna, a high-profile American actress. However, their relationship goes through many problems due to their different social statuses.', 'notting.mp4', 'May 13, 1999'),
-(6, 'shining.jpg', 'The Shining', '1980', '2h 26m', 'Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.', 'shining.pm4', 'May 23, 1980'),
+(6, 'shining.jpg', 'The Shining', '1980', '2h 26m', 'Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.', 'shining.mp4', 'May 23, 1980'),
 (7, 'titanic.jpg', 'Titanic', '1997', '3h 15m', 'Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.', 'titanic.mp4', 'November 18, 1997'),
 (8, 'ghost.jpg', 'Ghost', '1990', '2h 9m', 'Sam and Molly love each other, but their romance is short-lived when Sam is killed by a thug. Unable to tell Molly that her life is in danger, Sam\'s spirit takes help of a psychic.', 'ghost.mp4', 'July 13, 1990'),
 (9, 'romanholiday.jpg', 'Roman Holiday', '1953', '1h 58m', 'Stuck with boredom in her luxurious confinement, a princess escapes from her guardians and falls in love with an American news reporter in Rome.', 'romanholiday.mp4', 'August 20, 1953'),
-(10, 'jaws.jpg', 'Jaws', '1975', '2h 10m', 'A police chief, a marine scientist and a fisherman spring into action after a white shark terrorises the inhabitants of Amity, a quiet island.', 'jaws.mp4', 'July 31, 1975'),
+(10, 'jaws.jpg', 'Jaws', '1975', '2h 10m', 'A police chief, a marine scientist and a fisherman spring into action after a white shark terrorises the inhabitants of Amity, a quiet island.', 'jaws.mp4', 'July 31, 1975');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_movies_kids`
+--
+
+CREATE TABLE `tbl_movies_kids` (
+  `movies_id` mediumint(8) UNSIGNED NOT NULL,
+  `movies_cover` varchar(75) NOT NULL,
+  `movies_title` varchar(125) NOT NULL,
+  `movies_year` varchar(5) NOT NULL,
+  `movies_runtime` varchar(25) NOT NULL,
+  `movies_storyline` text NOT NULL,
+  `movies_trailer` varchar(75) NOT NULL,
+  `movies_release` varchar(125) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_movies_kids`
+--
+
+INSERT INTO `tbl_movies_kids` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
 (11, 'cinderella.jpg', 'Cinderella', '1950', '1h 16m', 'When Cinderella\'s dream of attending the Royal Ball and meeting the Grand Duke is hindered by her cruel stepmother, she gets some astounding help from her Fairy Godmother.', 'cinderella.mp4', 'February 22, 1950'),
 (12, 'marypoppins.jpg', 'Mary Poppins', '1964', '2h 19m', 'Mr Banks is looking for a nanny for his two mischievous children and comes across Mary Poppins, an angelic nanny. She not only brings a change in their lives but also spreads happiness.', 'marypoppins.mp4', 'August 27, 1964'),
 (13, 'chocolate.jpg', 'Willy Wonka & the Chocolate Factory', '1971', '1h 29m', 'A factory owner gives 5 children a chance to win a lifetime supply of sweets. Charlie, along with four odious children enter the factory. Disasters befall each of the children. Will Charlie survive?', 'chocolate.mp4', 'June 30, 1971'),
@@ -404,6 +429,31 @@ INSERT INTO `tbl_tv_genre` (`tv_genre_id`, `tv_id`, `genre_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_tv_kids`
+--
+
+CREATE TABLE `tbl_tv_kids` (
+  `tv_id` mediumint(8) UNSIGNED NOT NULL,
+  `tv_cover` varchar(75) NOT NULL,
+  `tv_title` varchar(125) NOT NULL,
+  `tv_year` varchar(5) NOT NULL,
+  `tv_storyline` text NOT NULL,
+  `tv_trailer` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_tv_kids`
+--
+
+INSERT INTO `tbl_tv_kids` (`tv_id`, `tv_cover`, `tv_title`, `tv_year`, `tv_storyline`, `tv_trailer`) VALUES
+(9, 'pink.jpg', 'The Pink Panther Show', '1969', 'The Pink Panther Show is a showcase of animated shorts produced by David H. DePatie and Friz Freleng between 1969 and 1978, starring the animated Pink Panther character from the opening credits of the live-action films.', 'pink.mp4'),
+(10, 'chipmunks.jpg', 'Alvin and the Chipmunks', '1983', 'Three chipmunk brothers, Alvin, Simon and Theodore drive their manager crazy.', 'chipmunks.mp4'),
+(11, 'snoopy.jpg', 'The Charlie Brown and Snoopy Show', '1983', 'The animated adventures of Charlie Brown, Snoopy and the rest of the Peanuts gang.', 'snoopy.mp4'),
+(12, 'bus.jpg', 'The Magic School Bus', '1994', 'Scholastic\'s \"The Magic School Bus\" follows Ms. Frizzle and her class as they set off on field trips. Based on the best-selling book series of the same name, \"The Magic School Bus\" takes kids on a virtual bus ride. Magically transforming into a plane, submarine, spaceship or surfboard, this bus carries Ms. Frizzle and her students on super adventures and teaches them about science.', 'bus.mp4');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_urating`
 --
 
@@ -424,7 +474,7 @@ CREATE TABLE `tbl_user` (
   `user_name` varchar(250) NOT NULL,
   `user_pass` varchar(250) NOT NULL,
   `user_email` varchar(250) NOT NULL,
-  `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `user_ip` varchar(50) NOT NULL,
   `user_avatar` varchar(20) NOT NULL,
   `user_permission` int(11) NOT NULL,
@@ -436,7 +486,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permission`, `user_admin`) VALUES
-(1, 'Dana', 'danamaring', 'password', 'dana@email.com', '2020-04-09 22:59:25', '', 'dana', 1, 1),
+(1, 'Dana', 'danamaring', 'password', 'dana@email.com', '2020-04-09 22:59:25', '172.27.0.1', 'dana', 1, 1),
 (2, 'Sujin', 'sujinlee', 'password', 'sujin@email.com', '2020-04-09 22:59:25', '', 'sujin', 1, 1),
 (3, 'Trevor', 'trevorvanrys', 'password', 'trevor@email.com', '2020-04-09 23:01:35', '', '', 1, 1),
 (4, 'Madelaine', 'user4', 'password', 'madelaine@email.com', '2020-04-09 23:01:35', '', '', 0, 0),
@@ -484,6 +534,12 @@ ALTER TABLE `tbl_movies`
   ADD PRIMARY KEY (`movies_id`);
 
 --
+-- Indexes for table `tbl_movies_kids`
+--
+ALTER TABLE `tbl_movies_kids`
+  ADD PRIMARY KEY (`movies_id`);
+
+--
 -- Indexes for table `tbl_mov_director`
 --
 ALTER TABLE `tbl_mov_director`
@@ -526,6 +582,12 @@ ALTER TABLE `tbl_tv_genre`
   ADD PRIMARY KEY (`tv_genre_id`);
 
 --
+-- Indexes for table `tbl_tv_kids`
+--
+ALTER TABLE `tbl_tv_kids`
+  ADD PRIMARY KEY (`tv_id`);
+
+--
 -- Indexes for table `tbl_urating`
 --
 ALTER TABLE `tbl_urating`
@@ -566,6 +628,12 @@ ALTER TABLE `tbl_movies`
   MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT for table `tbl_movies_kids`
+--
+ALTER TABLE `tbl_movies_kids`
+  MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `tbl_mov_director`
 --
 ALTER TABLE `tbl_mov_director`
@@ -594,6 +662,7 @@ ALTER TABLE `tbl_urating`
 --
 ALTER TABLE `tbl_user`
   MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
