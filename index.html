@@ -7,10 +7,11 @@
   <title>Vue.js Single-File JavaScript Component Demo</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
   <!-- Fonts links -->
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/vue"></script>
@@ -23,14 +24,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<header class="col-sm-12 fixed-top">
-					<img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
+					<a href="index.html"><img src="images/logo_w_flashback.svg" alt="RokuLogo" width="250"></a>
 					<nav class="float-right">
-					<ul>
-						<!-- <li>Kids</li> -->            
-						<router-link to="/users"><li v-if="authenticated"><i class="fas fa-user-circle"></i></li></router-link>
-						<li v-if="administrator"><i class="fas fa-cog"></i></li>
-						<li v-if="authenticated" v-on:click="logout()"><i class="fas fa-power-off"></i></li>					
-					</ul>
+						<ul>
+							<!-- <li>Kids</li> -->            
+							<router-link to="/users"><li v-if="authenticated"><i class="fas fa-user-circle"></i></li></router-link>
+							<li v-if="administrator"><i class="fas fa-cog"></i></li>
+							<li v-if="authenticated" v-on:click="logout()"><i class="fas fa-power-off"></i></li>					
+						</ul>
 					</nav>
 				</header>
 			</div>
@@ -39,20 +40,12 @@
 		<!-- first thing in component templates should be a container -->
 		<router-view @authenticated="setAuthenticated"/>	
 	
-		</main>
-	
-		<footer>
-			<div class="row">
-				<nav class="col-12 col-sm-3 side-nav footer-nav">
-					<ul class="media-type">
-						<li><i class="fas fa-home"></i></li>
-						<li><i class="fas fa-search"></i></li>
-						<li>
-							<a href="#"><i class="fas fa-sort-up"></i></li></a>
-					</ul>
-				</nav>
-			</div>
+		<footer id="mainFooter">
+				<p>© 2020 Roku FlashBack, Inc.</p>
+				<a href="#">^</a>
 		</footer>
+
+	</main>
 	
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
