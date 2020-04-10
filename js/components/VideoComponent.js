@@ -12,7 +12,7 @@ export default {
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+                <video autoplay controls muted :src="'images/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
 
@@ -45,11 +45,6 @@ export default {
             // debugger;
 
             if (localStorage.getItem("cachedVideo")) {
-                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-
-                this.currentMediaDetails = this.allRetrievedVideos[0];
-
-            } else {
                 let url = `./admin/index.php?media=movies`;
 
                 fetch(url)
@@ -60,6 +55,10 @@ export default {
                         this.allRetrievedVideos = data;
                         this.currentMediaDetails = data[0];
                     })
+
+            } else {
+                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
+                this.currentMediaDetails = this.allRetrievedVideos[0];
             }
 
         },

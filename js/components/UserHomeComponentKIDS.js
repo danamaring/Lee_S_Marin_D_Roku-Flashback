@@ -1,4 +1,4 @@
-import VideoComponent from "./VideoComponent.js";
+import VideoComponentKids from "./VideoComponentKids.js";
 import AudioComponent from "./AudioComponent.js";
 
 
@@ -31,11 +31,11 @@ export default {
 
     data: function() {
         return {
-            activeComponent: VideoComponent,
+            activeComponent: VideoComponentKids,
             
             mediaTypes: [
-                { iconClass: "fas fa-film", description: "Movies", component: VideoComponent },
-                { iconClass: "fas fa-tv", description: "Television", component: VideoComponent },
+                { iconClass: "fas fa-film", description: "Movies", component: VideoComponentKids },
+                { iconClass: "fas fa-tv", description: "Television", component: VideoComponentKids },
                 { iconClass: "fas fa-headphones", description: "Music", component: AudioComponent }
             ]
         }

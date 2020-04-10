@@ -5,6 +5,7 @@ if (isset($_GET['filter'])) {
     //Filter
     $args = array(
         'tbl' => 'tbl_movies',
+        'tblkids' => 'tbl_movies_kids',
         'tbl2' => 'tbl_genre',
         'tbl3' => 'tbl_mov_genre',
         'col' => 'movies_id',
@@ -15,7 +16,9 @@ if (isset($_GET['filter'])) {
     $getMovies = getMoviesByFilter($args);
 } else {
     $movie_table = 'tbl_movies';
+    $movie_table_kids = 'tbl_movies_kids';
     $getMovies = getAll($movie_table);
+    $getMoviesKids = getAll($movie_table_kids);
 }
 ?>
 
@@ -29,7 +32,7 @@ if (isset($_GET['filter'])) {
 </head>
 <body>
     <?php include 'templates/header.php';?>
-    <?php while ($row = $getMovies->fetch(PDO::FETCH_ASSOC)): ?>
+    <?php while ($row = $getMoviesKids->fetch(PDO::FETCH_ASSOC)): ?>
         <div class="movie-item">
             <img src="images/<?php echo $row['movies_cover']; ?>" alt="<?php echo $row['movies_title']; ?>" />
             <h2><?php echo $row['movies_title']; ?></h2>
