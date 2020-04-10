@@ -14,6 +14,25 @@ flash messaging etc).
 The Developer role was to create the proper project stucture, create and use database assets and research and implement how to include social media APIs (Facebook, Twitter, etc) to like, share, and comment / rate on each of the individual multimedia selections. 
 
 ## Getting Started
+1. Clone the repo
+   ```
+   git clone https://github.com/danamaring/Lee_S_Marin_D_Roku-Flashback.git
+   ```
+2. Download the images folder and expand it on the main folder.
+
+3. Open the folder and run docker-compose up
+   ```
+   cd Lee_S_Marin_D_Roku-Flashback
+   docker-compose up
+   ```
+4. Your app is running on
+   ```
+    http://localhost:8090/   
+   ```
+5. phpMyAdmin is running on
+   ```
+    http://localhost:8091/   
+   ```
 
 ### Dependencies
 
