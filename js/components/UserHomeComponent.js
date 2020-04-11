@@ -10,7 +10,6 @@ export default {
 
     template: `
     <div>
-        <h1>THIS IS AN ADULT PAGE.</h1>
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->
