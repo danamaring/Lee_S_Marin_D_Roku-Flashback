@@ -22,6 +22,26 @@ export default {
             </div>
         </div>
 
+        <div class="col-12 col-sm-9 media-info">
+            <ul class="media-genres">
+                <li>
+                    <a href="horror" @click.prevent="filterMedia('horror')">Horror</a>
+                </li>
+                <li>
+                    <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
+                </li>
+                <li>
+                    <a href="family" @click.prevent="filterMedia('family')">Family</a>
+                </li>
+                <li>
+                    <a href="horror" @click.prevent="filterMedia('fantasy')">Fantasy</a>
+                </li>
+                <li>
+                    <a href="horror" @click.prevent="retrieveVideoContent">All</a>
+                </li>
+            </ul>
+        </div>
+
         <div class="row">
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
@@ -46,11 +66,30 @@ export default {
     },
 
     methods: {
+        filterMedia(filter) {
+            // debugger;
+
+            let url = `./admin/index.php?media=movies&filter=${filter}`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    this.allRetrievedVideos = data;
+                    this.currentMediaDetails = data[0];
+                })
+
+        },
+
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
 
             if (localStorage.getItem("cachedVideo")) {
+                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
+
+                this.currentMediaDetails = this.allRetrievedVideos[0];
+
+            } else {
                 let url = `./admin/index.php?media=movies`;
 
                 fetch(url)
@@ -61,10 +100,6 @@ export default {
                         this.allRetrievedVideos = data;
                         this.currentMediaDetails = data[0];
                     })
-
-            } else {
-                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-                this.currentMediaDetails = this.allRetrievedVideos[0];
             }
 
         },
