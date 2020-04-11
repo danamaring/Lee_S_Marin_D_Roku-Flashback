@@ -9,7 +9,7 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div>
+    <div id="homeCon">
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->

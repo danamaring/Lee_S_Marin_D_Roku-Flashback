@@ -1,0 +1,46 @@
+@import '_vars';
+@import 'modules/_login';
+@import 'modules/_user';
+@import 'modules/_userhome';
+@import 'modules/_footer';
+
+.hidden { display: $hide; }
+
+body {
+	font-family: $main-font;
+    background-color: $bg-color;
+    color: $white;
+}
+
+a { 
+    color: $white;
+    text-decoration: none;
+    &:hover{
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+header {
+	background-color: transparent;
+	padding: 12px 14px;
+	position: fixed;
+	z-index: 500;
+	width: 100%;
+	backdrop-filter: blur(10px);
+}
+
+nav {
+	ul {
+		right: 3em;
+		list-style-type: none;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+			font-size: 1.75em;
+			padding: 0 0.2em;
+			cursor: pointer;
+		}
+	}
+}
