@@ -9,8 +9,8 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div>
-        <h1>THIS IS AN ADULT PAGE.</h1>
+    <div id="homeCon">
+        <h1 class="hidden">THIS IS AN ADULT PAGE.</h1>
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->
