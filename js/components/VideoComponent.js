@@ -25,7 +25,7 @@ export default {
         <div class="col-12 col-sm-9 media-info">
             <ul class="media-genres">
                 <li>
-                    <a href="action" @click.prevent="filterMedia('action')">Action</a>
+                    <a href="horror" @click.prevent="filterMedia('horror')">Horror</a>
                 </li>
                 <li>
                     <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
@@ -85,6 +85,11 @@ export default {
             // debugger;
 
             if (localStorage.getItem("cachedVideo")) {
+                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
+
+                this.currentMediaDetails = this.allRetrievedVideos[0];
+
+            } else {
                 let url = `./admin/index.php?media=movies`;
 
                 fetch(url)
@@ -95,10 +100,6 @@ export default {
                         this.allRetrievedVideos = data;
                         this.currentMediaDetails = data[0];
                     })
-
-            } else {
-                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-                this.currentMediaDetails = this.allRetrievedVideos[0];
             }
 
         },
