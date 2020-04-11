@@ -27,8 +27,8 @@
 
     // tv shows
     if(isset($_GET['filter_tv'])){
-        $args_tv = array(
-            'tbl' => $tbl_,
+        $args = array(
+            'tbl' => $tbl,
             'tbl2' => 'tbl_genre',
             'tbl3' => 'tbl_tv_genre',
             'col' => 'tv_id',
@@ -37,7 +37,23 @@
             'filter_tv' => $_GET['filter_tv'],
         );
 
-        $resultsTv = getTvByFilter($args_tv);
-        echo json_encode($resultsTv->fetchAll(PDO::FETCH_ASSOC));
+        $results = getTvByFilter($args);
+        echo json_encode($results->fetchAll(PDO::FETCH_ASSOC));
+    } 
+
+    // audio
+    if(isset($_GET['filter_audio'])){
+        $args = array(
+            'tbl' => $tbl_,
+            'tbl2' => 'tbl_genre',
+            'tbl3' => 'tbl_mu_genre',
+            'col' => 'music_id',
+            'col2' => 'genre_id',
+            'col3' => 'genre_name',
+            'filter_audio' => $_GET['filter_audio'],
+        );
+
+        $results = getAudioByFilter($args);
+        echo json_encode($results->fetchAll(PDO::FETCH_ASSOC));
     }
 ?>

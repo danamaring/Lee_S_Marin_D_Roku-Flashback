@@ -27,7 +27,7 @@ export default {
                     <a href="drama" @click.prevent="filterMedia('drama')">drama</a>
                 </li>
                 <li>
-                    <a href="animation" @click.prevent="filterMedia('animation')">animation</a>
+                    <a href="comedy" @click.prevent="filterMedia('comedy')">comedy</a>
                 </li>
                 <li>
                     <a href="romance" @click.prevent="filterMedia('romance')">romance</a>
@@ -72,6 +72,7 @@ export default {
 
             fetch(url)
                 .then(res => res.json())
+                // .then(text => console.log(text))
                 .then(data => {
                     this.allRetrievedVideos = data;
                     this.currentMediaDetails = data[0];
