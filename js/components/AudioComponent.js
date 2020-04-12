@@ -21,11 +21,11 @@ export default {
         </div>
 
         <div class="row">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
+            <div class="col-12 col-sm-9 posterC">
+                <div class="thumb-wrapper audio-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.music_cover" alt="media
                     thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left
-                    media-thumb">
+                    media-thumb audio-thumb">
                 </div>
             </div>
         </div>
