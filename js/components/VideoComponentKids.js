@@ -22,13 +22,15 @@ export default {
         </div>
 
         <div class="row">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideosKids" :src="'images/' + item.movies_cover" alt="media
-                    thumb" @click="loadNewMovieKids(item)" class="img-thumbnail rounded float-left
-                    media-thumb">
+            <div class="coverS">
+                <div class="col-12 col-sm-9 posterC">
+                    <div class="thumb-wrapper clearfix">
+                        <img v-for="item in allRetrievedVideosKids" :src="'images/' + item.movies_cover" alt="media
+                        thumb" @click="loadNewMovieKids(item)" class="img-thumbnail rounded float-left
+                        media-thumb">
+                    </div>
                 </div>
-            </div>
+            </div>    
         </div>
     </section>
     `,
