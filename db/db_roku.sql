@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: mysql
--- Tiempo de generación: 10-04-2020 a las 05:42:42
+-- Tiempo de generación: 12-04-2020 a las 00:41:01
 -- Versión del servidor: 10.3.21-MariaDB-1:10.3.21+maria~bionic
 -- Versión de PHP: 7.2.23
 
@@ -482,9 +482,9 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permission`, `user_admin`) VALUES
-(1, 'Dana', 'danamaring', 'password', 'dana@email.com', '2020-04-09 22:59:25', '172.27.0.1', 'dana', 1, 1),
+(1, 'Dana', 'danamaring', 'password', 'dana@email.com', '2020-04-09 22:59:25', '172.28.0.1', 'dana', 1, 1),
 (2, 'Sujin', 'sujinlee', 'password', 'sujin@email.com', '2020-04-09 22:59:25', '', 'sujin', 1, 1),
-(3, 'Trevor', 'trevorvanrys', 'password', 'trevor@email.com', '2020-04-09 23:01:35', '', NULL, 1, 1),
+(3, 'Trevor', 'trevorvanrys', 'password', 'trevor@email.com', '2020-04-09 23:01:35', '', 'trevor', 1, 1),
 (4, 'Madelaine', 'user4', 'password', 'madelaine@email.com', '2020-04-09 23:01:35', '', NULL, 0, 0),
 (5, 'Isabelle', 'user5', 'password', 'isabelle@email.com', '2020-04-09 23:02:32', '', NULL, 0, 0),
 (6, 'Serena', 'user6', 'password', 'serena@email.com', '2020-04-09 23:02:32', '', NULL, 0, 0);
