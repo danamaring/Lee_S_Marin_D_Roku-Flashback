@@ -1,0 +1,188 @@
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    #welcome {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 505px) {
+
+    #help {
+
+        a {
+            top: 9%;
+            right: 2%;
+        }
+    }
+
+    #stacked-logo {
+        img {
+            width: 45%;
+            margin-top: 20%;
+            margin-left: 18%;
+        }
+    }
+
+    .login-form {
+
+        .username-field, .password-field {
+
+            input {
+                margin-left: 14%;
+            }
+        }
+
+        .submit-button {
+            button {
+                margin-top: 5%;
+                margin-left: 25%;
+            }
+        }
+    }
+
+
+    #new-to-roku {
+        a {
+            margin-left: 31%;
+            margin-top: 8%;
+        }
+    }
+}
+
+@media screen and (min-width: 506px) and (max-width: 799px) {
+
+    #help {
+
+        a {
+            top: 9%;
+            right: 2%;
+        }
+    }
+
+    #stacked-logo {
+        img {
+            width: 40%;
+            margin-top: 20%;
+            margin-left: 16%;
+        }
+    }
+
+    .login-form {
+
+        .username-field, .password-field {
+
+            input {
+                margin-left: 14%;
+            }
+        }
+
+        .submit-button {
+            button {
+                margin-top: 5%;
+                margin-left: 21%;
+            }
+        }
+    }
+
+
+    #new-to-roku {
+        a {
+            margin-left: 26%;
+            margin-top: 8%;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    #welcome {
+        top: 20%;
+        right: 8%;
+
+        p {
+            font-size: 1.8em;
+        }
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+    #welcome {
+        top: 25%;
+    }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 769px) {
+    .user-message {
+        margin-top: 15%;
+    }
+}
+
+// 768 is tablet @ portait
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    .user-message {
+        font-size: 2.5rem;
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .media-title {
+        font-size: 1.25em;
+    }
+
+    .media-year { float: none; }
+
+    .media-container:first-of-type { padding-bottom: 0; }
+
+    .media-thumb { height: 165px; }
+
+    footer ul { max-width: none; }
+}
+
+@media (min-width: 992px) {
+    .display-4 {
+        font-size: 3.5rem;
+    }
+
+    .thumb-wrapper { 
+        max-height: 350px; 
+        overflow-x: auto; 
+    }
+    
+    .media-title {
+        font-size: 1.75em;
+    }
+
+    .media-type { 
+        list-style-type: none;
+        margin-bottom: 0;
+        
+        li { 
+            padding: 1rem;
+            border-bottom: thin solid $dark-bg;
+            cursor: pointer;
+            display: block;
+            width: auto;
+            text-align: left;
+
+            span:first-of-type { 
+                padding-right: 1rem; 
+                font-size: 2rem; 
+                color: white;
+            }
+    
+            span:last-of-type { 
+                display: inline-block !important;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                position: relative;
+                top: -6px;
+            }
+        }
+    
+        li:hover span:first-of-type { color: $roku-purple }
+    
+        li:last-of-type { border-bottom: none; }
+    }
+}
