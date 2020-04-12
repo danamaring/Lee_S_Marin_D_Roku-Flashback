@@ -16,12 +16,10 @@ export default {
                 </div>
             </div>
             
-
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
                 <video autoplay controls muted :src="'images/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
-
         <div class="col-12 col-sm-9 media-info">
             <ul class="media-genres">
                 <li>
@@ -41,15 +39,16 @@ export default {
                 </li>
             </ul>
         </div>
-
         <div class="row">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media
-                    thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left
-                    media-thumb">
+            <div class="coverS">
+                <div class="col-12 col-sm-9 posterC">
+                    <div class="thumb-wrapper clearfix">
+                        <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media
+                        thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left
+                        media-thumb">
+                    </div>
                 </div>
-            </div>
+            </div>    
         </div>
     </section>
     `,
