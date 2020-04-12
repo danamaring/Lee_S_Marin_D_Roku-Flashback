@@ -18,7 +18,10 @@ The Developer role was to create the proper project stucture, create and use dat
    ```
    git clone https://github.com/danamaring/Lee_S_Marin_D_Roku-Flashback.git
    ```
-2. Download the images folder and expand it on the main folder.
+2. Download the images folder, unzip it, copy all the content and paste it inside the images folder that is already in the main directory. 
+   ```
+    https://drive.google.com/file/d/18APXuyN3v5naddb4fbJ-ICyhGZB3q8If/view?usp=sharing 
+   ```
 
 3. Open the folder and run docker-compose up
    ```
