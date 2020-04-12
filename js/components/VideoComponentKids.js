@@ -21,6 +21,26 @@ export default {
             </div>
         </div>
 
+        <div class="col-12 col-sm-9 media-info">
+            <ul class="media-genres">
+                <li>
+                    <a href="animation" @click.prevent="filterMedia('animation')">animation</a>
+                </li>
+                <li>
+                    <a href="music" @click.prevent="filterMedia('music')">music</a>
+                </li>
+                <li>
+                    <a href="family" @click.prevent="filterMedia('family')">Family</a>
+                </li>
+                <li>
+                    <a href="fantasy" @click.prevent="filterMedia('fantasy')">Fantasy</a>
+                </li>
+                <li>
+                    <a href="horror" @click.prevent="retrieveVideoContent">All</a>
+                </li>
+            </ul>
+        </div>
+
         <div class="row">
             <div class="coverS">
                 <div class="col-12 col-sm-9 posterC">
@@ -47,6 +67,20 @@ export default {
     },
 
     methods: {
+        filterMedia(filter) {
+            // debugger;
+
+            let url = `./admin/index.php?media=movies_kids&filter=${filter}`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    this.allRetrievedVideosKids = data;
+                    this.currentMediaDetailsKids = data[0];
+                })
+
+        },
+        
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
